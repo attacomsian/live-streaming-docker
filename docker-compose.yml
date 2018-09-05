@@ -13,6 +13,7 @@ services:
       - MYSQL_PASSWORD=root
   spring-boot-jpa-docker-webapp:
     build: live-streaming
+    restart: on-failure
     depends_on:
       - docker-mysql
     ports:
